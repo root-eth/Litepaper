@@ -1,0 +1,46 @@
+git branch -m j52 <BRANCH>
+
+git fetch origin
+
+git branch -u origin/<BRANCH> <BRANCH>
+
+git remote set-head origin -a
+use npm_package::SyncNpmClient;
+
+fn main() {
+
+    let client = SyncNpmClient::new();
+
+    let package = client.get("is-interactive").unwrap();
+
+    let version_history = package.versions.keys().collect::<Vec<_>>();
+
+    println!("All is-interactive releases
+    
+    diff --git a/Gemfile.lock b/Gemfile.lock
+
+index 6e1acdb..30a1dae 100644
+
+--- a/Gemfile.lock
+
++++ b/Gemfile.lock
+
+@@ -163,7 +163,7 @@ GEM
+
+       thread_safe (~> 0.1)
+
+     websocket-driver (0.7.1)
+
+       websocket-extensions (>= 0.1.0)
+
+-    websocket-extensions (0.1.4)
+
++    websocket-extensions (0.1.5)
+
+4@ghoul652
+
+ 
+
+ PLATFORMS
+
+   ruby
